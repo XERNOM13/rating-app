@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --danger-color: #dc3545;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    color: #e2e8f0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    min-height: 100vh;
+}
+
+.max-width-container {
+    max-width: 760px;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+    border: 1px solid rgba(100, 116, 139, 0.3);
+    backdrop-filter: blur(10px);
+    color: #e2e8f0;
+}
+
+.card-title {
+    color: #f1f5f9;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-control,
+.form-select {
+    background-color: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(100, 116, 139, 0.4);
+    color: #e2e8f0;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(226, 232, 240, 0.5);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: rgba(30, 41, 59, 0.8);
+    border-color: #0d6efd;
+    color: #e2e8f0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-select option {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0b5ed7 0%, #0a58ca 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:disabled {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    transform: none;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.message.alert-info {
+    background-color: rgba(13, 202, 240, 0.15);
+    border: 1px solid rgba(13, 202, 240, 0.3);
+    color: #87ceeb;
+}
+
+.message.alert-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #ff7b7b;
+}
+
+.summary {
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.rating-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(100, 116, 139, 0.3);
+    border-left: 4px solid #0d6efd;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.rating-card:hover {
+    transform: translateY(-3px);
+    border-left-color: #0dcaf0;
+    box-shadow: 0 12px 25px rgba(13, 202, 240, 0.2);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-top h3 {
+    margin: 0;
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.badge {
+    background: rgba(13, 202, 240, 0.2);
+    color: #87ceeb;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    border: 1px solid rgba(13, 202, 240, 0.4);
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 1.15rem;
+    margin: 0.5rem 0 0.25rem;
+    letter-spacing: 0.15rem;
+}
+
+.rating-value {
+    margin: 0;
+    font-weight: 700;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.empty-state,
+.error {
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
